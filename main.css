@@ -1,1 +1,113 @@
-body{}
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+
+#intro {
+  display: inline-block;
+  width: 100%;
+}
+
+#intro h1 {
+  float: left;
+  margin-left: -5px;
+  animation: fadein 3s;
+  -moz-animation: fadein 3s; /* Firefox */
+  -webkit-animation: fadein 3s; /* Safari and Chrome */
+  -o-animation: fadein 3s; /* Opera */
+}
+
+#intro a {
+  opacity: 0;
+  float: left;
+  margin-left: 3%;
+  margin-top: 33px;
+  animation: fadein 0.4s ease-in 4.8s forwards;
+  -moz-animation: fadein 0.4s ease-in 4.8s forwards; /* Firefox */
+  -webkit-animation: fadein 0.4s ease-in 4.8s forwards; /* Safari and Chrome */
+  -o-animation: fadein 0.4s ease-in 4.8s forwards; /* Opera */
+}
+
+.text {
+    position: relative;
+    line-height: 2em;
+    overflow: hidden;
+}
+
+.fadingEffect {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 100%;
+    background: #eee;
+    -moz-animation: showHide 2s ease-in forwards; /* Firefox */
+    -webkit-animation: showHide 2s ease-in forwards; /* Safari and Chrome */
+    -ms-animation: showHide 2s ease-in forwards; /* IE10 */
+    -o-animation: showHide 2s ease-in forwards; /* Opera */
+    animation: showHide 2s ease-in forwards;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+
+.fadingEffect2 {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 100%;
+    background: #eee;
+    -moz-animation: showHide 2s ease-in forwards; /* Firefox */
+    -webkit-animation: showHide 2s ease-in forwards; /* Safari and Chrome */
+    -ms-animation: showHide 2s ease-in forwards; /* IE10 */
+    -o-animation: showHide 2s ease-in forwards; /* Opera */
+    animation: showHide 2s ease-in forwards;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes showHide { /* Chrome, Safari */
+    0% {width: 100%}
+  100% {width: 0%}
+}
+@-moz-keyframes showHide { /* FF */
+    0% {width: 100%}
+  100% {width: 0%}
+}
+@-ms-keyframes showHide { /* IE10 */
+    0% {width: 100%}
+  100% {width: 0%}
+}
+@-o-keyframes showHide { /* Opera */
+    0% {width: 100%}
+  100% {width: 0%}
+}
+@keyframes showHide {
+    0% {width: 100%}
+  100% {width: 0%}
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
