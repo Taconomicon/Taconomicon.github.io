@@ -1,6 +1,6 @@
-var intro = "My name is Dylan Mink. I'm learning CS at the University of Maryland, and I love to code!";
+var intro = "My name is Dylan Mink. I studied CS at the University of Maryland, and I love to code!";
 // var intwo = "Feel free to explore, I've tried to make this page fun to use.";
-var intwo = "Stay tuned for more, this website is currently under development!  :)";
+var intwo = "Stay tuned for more, this website is currently under development!";
 
 var punctuation = ['.', ',', '!', "?", ";"];
 
