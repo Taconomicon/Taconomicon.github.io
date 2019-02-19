@@ -1,14 +1,53 @@
-function party() {
-  alert("It's a party!");
+var intro = "My name is Dylan Mink. I'm learning CS at the University of Maryland, and I love to code!";
+var intwo = "Feel free to explore, I've tried to make this page fun to use.";
+
+var punctuation = ['.', ',', '!', "?", ";"];
+
+var party_time = true;
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
 }
 
-var intro = "My name is Dylan Mink. I'm learning CS at the University of Maryland, and I love to code!";
+function writeOut(txt, eid, pos) {
+  character = txt.charAt(pos);
+  delay = 20 + getRandomInt(20);
 
-function writeOut(txt, id, pos) {
+  if (punctuation.indexOf(character) >= 0)
+    delay += 100
+  if (character == ' ')
+    delay = 10;
   if (pos < txt.length) {
-    document.getElementById(id).innerHTML += txt.charAt(pos);
-    setTimeout(writeOut(txt, id, pos + 1), 500);
+    document.getElementById(eid).innerHTML += character;
+    setTimeout(function () {
+      writeOut(txt, eid, pos + 1)
+    }, delay);
   }
 }
 
-writeOut(intro, "hi", 0);
+function party() {
+  if (party_time) {
+    // Expand space before printing intro
+    document.getElementById("hi").classList.toggle("extended");
+    // Print intro
+    setTimeout(function () {
+      writeOut(intro, "hi", 0);
+    }, 300);
+
+    // Smoothly add space for second line
+    setTimeout(function () {
+      document.getElementById("explore").classList.toggle("extended_even_MORE");
+    }, 1700);
+
+    // Write second line
+    setTimeout(function () {
+      writeOut(intwo, "explore", 0);
+    }, 3500);
+  }
+
+  party_time = false;
+}
+
+window.onload = function () {
+  // writeOut(intro, "hi", 0);
+};
