@@ -45,6 +45,13 @@ function party() {
     setTimeout(function () {
       writeOut(intwo, "explore", 0);
     }, 3500);
+
+    // Spin up those dots
+    setTimeout(function () {
+      document.getElementById("dot_1").classList.toggle("fade1")
+      document.getElementById("dot_2").classList.toggle("fade2")
+      document.getElementById("dot_3").classList.toggle("fade3")
+    }, 4000);
   }
 
   party_time = false;
