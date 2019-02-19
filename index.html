@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 
 <head>
   <!-- Bootstrap, jQuery, and JS libraries -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 
   <meta charset="utf-8" />
   <meta name="keywords" content="key, words" />
@@ -16,24 +17,20 @@
   <link rel="alternate" title="Website Feed" href="rss.php" type="application/rss+xml" />
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
 
-  <title>The Site of Dylan Mink</title>
+  <title>Dylan Mink.io</title>
 </head>
-
-<!-- TODO
-  - Cool buttons
-  - Information about myself
-  - Cooler buttons
-  - Animations
-  - ANIMATION CHOICES
--->
-
-<body>
-  <div class="container-fluid">
-    <p>
-      This page is currently under construction.
-      If you would like to contact me, I can be reached at DylanMinkt@gmail.com
-    </p>
-  </div>
-</body>
-
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <div id="intro">
+          <h1>Hello World!</h1>
+          <a class="btn btn-lg btn-primary" onclick="party();" role="button">🎉</a>
+        </div>
+        <div>
+          <p class="extendable" id="hi"></p>
+          <p class="extendable" id="explore"></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
