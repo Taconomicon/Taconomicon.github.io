@@ -14,10 +14,11 @@ function writeOut(txt, eid, pos) {
   character = txt.charAt(pos);
   delay = 20 + getRandomInt(20);
 
-  if (punctuation.indexOf(character) >= 0)
-    delay += 100
   if (character == ' ')
     delay = 10;
+  else if (punctuation.indexOf(character) >= 0)
+    delay += 100
+
   if (pos < txt.length) {
     document.getElementById(eid).innerHTML += character;
     setTimeout(function () {
