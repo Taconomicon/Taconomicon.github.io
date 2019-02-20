@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<script>
-  var intro = "My name is Dylan Mink. I studied CS at the University of Maryland, and I love to code!";
-  var intwo = "Stay tuned for more, this website is currently under development.";
-</script>
-
 <head>
   <!-- Bootstrap, jQuery, and JS libraries -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +19,7 @@
 
   <title>Dylan.io</title>
 </head>
+
   <body>
     <div class="container">
       <div class="jumbotron">
@@ -37,6 +33,26 @@
           <p class="extendable" id="explore"></p>
         </div>
       </div>
+      <div id="dots">
+        <div class="pulsing dot" id="dot_1"></div>
+        <div class="pulsing dot" id="dot_2"></div>
+      </div>
+      <div id="arrow_head">
+        <div class="pulsing arrow" id="arrow"></div>
+      </div>
+    </div> <!-- /container -->
+    <div class="jumbotron footer">
+      <p id="footer"></p>
     </div>
   </body>
+
+  <script>
+    var intro = "My name is Dylan Mink. I studied CS at the University of Maryland, and I love to code!";
+    var intwo = "Stay tuned for more, this website is currently under development.";
+    var intoh = "Oh! There's not anything fun down here...                 yet.";
+
+    var footer_written = false;
+    writeOnScroll(intoh, "footer");
+  </script>
+
 </html>
