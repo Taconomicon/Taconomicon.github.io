@@ -1,9 +1,4 @@
-var intro = "My name is Dylan Mink. I studied CS at the University of Maryland, and I love to code!";
-// var intwo = "Feel free to explore, I've tried to make this page fun to use.";
-var intwo = "Stay tuned for more, this website is currently under development.";
-
-var punctuation = ['.', ',', '!', "?", ";"];
-
+var punctuation = ['.', ',', '!', "?", ";", "\""];
 var party_time = true;
 
 function getRandomInt(max) {
@@ -27,6 +22,25 @@ function writeOut(txt, eid, pos) {
   }
 }
 
+/* Sourced from https://stackoverflow.com/a/21561584 with modifications */
+
+function writeOnScroll(txt, elementId) {
+  var elt = document.getElementById(elementId);
+
+  $(window).scroll(function(written_flag_id) {
+     var hT = $("#" + elementId).offset().top,
+         hH = $("#" + elementId).outerHeight(),
+         wH = $(window).height(),
+         wS = $(this).scrollTop();
+    if (wS > (hT+hH-wH) && (hT > wS) && (wS+wH > hT+hH)){
+      $(window).off('scroll');
+      writeOut(txt, elementId, 0)
+    }
+  });
+}
+
+// END
+
 function party() {
   if (party_time) {
     // Expand space before printing intro
@@ -39,7 +53,7 @@ function party() {
     // Smoothly add space for second line
     setTimeout(function () {
       document.getElementById("explore").classList.toggle("extended_even_MORE");
-    }, 1700);
+    }, 2800);
 
     // Write second line
     setTimeout(function () {
@@ -50,13 +64,9 @@ function party() {
     setTimeout(function () {
       document.getElementById("dot_1").classList.toggle("fade1")
       document.getElementById("dot_2").classList.toggle("fade2")
-      document.getElementById("dot_3").classList.toggle("fade3")
-    }, 4000);
+      document.getElementById("arrow").classList.toggle("fade3")
+    }, 7500);
   }
 
   party_time = false;
 }
-
-window.onload = function () {
-  // writeOut(intro, "hi", 0);
-};

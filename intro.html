@@ -72,12 +72,26 @@
           <p class="extendable" id="explore"></p>
         </div>
       </div>
-      <div class="arrow-triangle right"></div>
       <div id="dots">
-        <div class="pulsing" id="dot_1"></div>
-        <div class="pulsing" id="dot_2"></div>
-        <div class="pulsing" id="dot_3"></div>
+        <div class="pulsing dot" id="dot_1"></div>
+        <div class="pulsing dot" id="dot_2"></div>
+      </div>
+      <div id="arrow_head">
+        <div class="pulsing arrow" id="arrow"></div>
       </div>
     </div> <!-- /container -->
+    <div class="jumbotron footer">
+      <p id="footer"></p>
+    </div>
   </body>
+
+  <script>
+    var intro = "My name is Dylan Mink. I studied CS at the University of Maryland, and I love to code!";
+    var intwo = "Feel free to explore, I've tried to make this page fun to use.";
+    var intoh = "Oh! There's not anything fun down here...                 yet.";
+
+    var footer_written = false;
+    writeOnScroll(intoh, "footer");
+  </script>
+
 </html>

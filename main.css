@@ -1,7 +1,7 @@
 body {
-  min-height: 2000px;
+  height: 2000px;
   min-width: 700px;
-
+  position: relative;
   padding-top: 70px;
 }
 
@@ -13,18 +13,22 @@ body {
   transition: min-height 0.3s ease-out;
 }
 .extendable.extended {
-  min-height: 60px;
+  min-height: 45px;
 }
 .extendable.extended_even_MORE {
-  min-height: 30px;
+  min-height: 45px;
+}
+
+.footer {
+  margin-bottom: 10px;
+  margin-left: 20px;
+  background: none;
+  bottom: 0;
+  position: absolute;
 }
 
 .pulsing {
     opacity: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 30px;
-    background: #353535;
 }
 .pulsing.fade1 {
   animation: fade1 2.5s linear forwards;
@@ -57,59 +61,65 @@ body {
   -o-animation-iteration-count: infinite;
 }
 
+/* Sourced from https://stackoverflow.com/a/14448027 with modifications */
+
+.arrow, .arrow:before, .arrow:after {
+  width: 5em;
+  height: 5em;
+}
+
 .arrow {
-  position: relative;
-  color: #353535;
-  font-family: Arial sans-serif;
-  font-size: 2em;
-  text-decoration: none;
-  padding: 0.5em 1.5em;
-}
-
-.arrow-triangle,
-.arrow-triangle:before,
-.arrow-triangle:after {
-  width:  2em;
-  height: 2em;
-  border-top-right-radius: 30%;
-}
-
-.arrow-triangle:before,
-.arrow-triangle:after {
-  content: '';
-  position: absolute;
-  background-color: inherit;
+	overflow: hidden;
+	position: relative;
+	margin: 7em auto 0;
+	border-radius: 20%;
+	transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
+	cursor: pointer;
+	pointer-events: none;
 }
 
 .arrow:before, .arrow:after {
-  content:"";
+	position: absolute;
   background: #353535;
-  -webkit-border-radius: 0.2em;
-  border-radius: 0.2em;
-  display: block;
-  height: 0.5em;
-  position: absolute;
-  right: 0;
-  width: 1em;
+	pointer-events: auto;
+	content: '';
 }
 
-.arrow.left:before, .arrow.left:after {
-  left: 0;
+.arrow:before {
+	border-radius: 20% 20% 20% 53%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+			skewX(30deg) scaleY(.866) translateX(-24%);
 }
 
-.arrow.left:after, .arrow.left:before,.arrow.right:before {
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+.arrow:after {
+	border-radius: 20% 20% 53% 20%;
+	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+			skewX(-30deg) scaleY(.866) translateX(24%);
 }
 
-.arrow-triangle.right {
-  transform: rotate(-30deg) skewX(-30deg) scale(1,.866);
+/* END */
+
+#dots .dot {
+  background: #353535;
+  border-radius: 30px;
 }
 
 #dots div {
-  margin-left: 50%;
-  padding-top: 40px;
+  margin: auto;
   margin-top: 20px;
+  width: 30px;
+  height: 50px;
+}
+
+#arrow_head {
+  margin: auto;
+  margin-top: -70px;
+
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 #intro {
@@ -137,34 +147,6 @@ body {
   -webkit-animation: fadein 0.6s ease-in 1s forwards; /* Safari and Chrome */
   -o-animation: fadein 0.6s ease-in 1s forwards; /* Opera */
 }
-
-/* .fadingEffect {
-    position: absolute;
-    top: 0; bottom: 0; right: 0;
-    width: 100%;
-    background: #eee;
-    -moz-animation: showHide 2s ease-in forwards;
-    -webkit-animation: showHide 2s ease-in forwards;
-    -ms-animation: showHide 2s ease-in forwards;
-    -o-animation: showHide 2s ease-in forwards;
-    animation: showHide 2s ease-in forwards;
-    animation-delay: 1s;
-    animation-iteration-count: 1;
-} */
-
-/* .fadingEffect2 {
-    position: absolute;
-    top: 0; bottom: 0; right: 0;
-    width: 100%;
-    background: #eee;
-    -moz-animation: showHide 2s ease-in forwards;
-    -webkit-animation: showHide 2s ease-in forwards;
-    -ms-animation: showHide 2s ease-in forwards;
-    -o-animation: showHide 2s ease-in forwards;
-    animation: showHide 2s ease-in forwards;
-    animation-delay: 2s;
-    animation-iteration-count: 1;
-} */
 
 @-webkit-keyframes showHide { /* Chrome, Safari */
     0% { width: 100% }
