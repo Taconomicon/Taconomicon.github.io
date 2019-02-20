@@ -13,7 +13,6 @@ body {
   transition: min-height 0.3s ease-out;
 }
 .extendable.extended {
-  /* min-height: 45px; */
   min-height: 60px;
 }
 .extendable.extended_even_MORE {
@@ -68,30 +67,25 @@ body {
   width: 5em;
   height: 5em;
 }
-
 .arrow {
 	overflow: hidden;
 	position: relative;
 	margin: 7em auto 0;
 	border-radius: 20%;
 	transform: translateY(50%) rotate(30deg) skewY(30deg) scaleX(.866);
-	cursor: pointer;
 	pointer-events: none;
 }
-
 .arrow:before, .arrow:after {
 	position: absolute;
   background: #353535;
 	pointer-events: auto;
 	content: '';
 }
-
 .arrow:before {
 	border-radius: 20% 20% 20% 53%;
 	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
 			skewX(30deg) scaleY(.866) translateX(-24%);
 }
-
 .arrow:after {
 	border-radius: 20% 20% 53% 20%;
 	transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
@@ -99,6 +93,10 @@ body {
 }
 
 /* END */
+
+#dots {
+  padding-top: 20px;
+}
 
 #dots .dot {
   background: #353535;
@@ -114,7 +112,7 @@ body {
 
 #arrow_head {
   margin: auto;
-  margin-top: -70px;
+  margin-top: -80px;
 
   -moz-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
