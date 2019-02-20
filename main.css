@@ -77,7 +77,7 @@ body {
 }
 .arrow:before, .arrow:after {
 	position: absolute;
-  background: #353535;
+  background: #ababab;
 	pointer-events: auto;
 	content: '';
 }
@@ -95,11 +95,11 @@ body {
 /* END */
 
 #dots {
-  padding-top: 20px;
+  padding-top: 30px;
 }
 
 #dots .dot {
-  background: #353535;
+  background: #ababab;
   border-radius: 30px;
 }
 
@@ -169,24 +169,20 @@ body {
 }
 
 @keyframes fade1 {
-  0% { opacity: 0 }
+  0%, 80% { opacity: 0 }
   40% { opacity: 1 }
-  80% { opacity: 0 }
 }
 @-moz-keyframes fade1 { /* Firefox */
-  0% { opacity: 0 }
+  0%, 80% { opacity: 0 }
   40% { opacity: 1 }
-  80% { opacity: 0 }
 }
 @-webkit-keyframes fade1 { /* Safari and Chrome */
-  0% { opacity: 0 }
+  0%, 80% { opacity: 0 }
   40% { opacity: 1 }
-  80% { opacity: 0 }
 }
 @-o-keyframes fade1 { /* Opera */
-  0% { opacity: 0 }
+  0%, 80% { opacity: 0 }
   40% { opacity: 1 }
-  80% { opacity: 0 }
 }
 
 @keyframes fade2 {
